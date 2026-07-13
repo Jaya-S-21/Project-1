@@ -17,7 +17,7 @@ body{
     padding-top: 50px;
     margin: auto;
 }
-#sidebar, #mainbar{
+#sidebar{
     height: 90vh;
     background-color: #2a2a2a;
     border: 1px solid #3a3a3a;
@@ -75,8 +75,78 @@ body{
     width: 24px;
     margin-left:5px; 
     filter: grayscale(1) invert(0.7);
-    transition: filter 0.3sec ease;
+    transition: filter 0.3s ease;
 }
 #social img:hover{
     filter: grayscale(0) invert(0);
+}
+
+
+
+
+#mainbar{
+    background-color: #2a2a2a;
+    border: 1px solid #3a3a3a;
+    border-radius: 17px;
+    padding: 40px;
+}
+nav{
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+    border-bottom: 2px solid #3a3a3a;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+nav a {
+    text-decoration: none;
+    color: #a0a0a0;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+.active, nav a:hover{
+    color: #FFBF00;
+}
+.heading{
+    color: #e0e0e0;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+.line{
+    width: 60px;
+    height: 5px;
+    background-color: #FFBF00;
+    margin-bottom: 15px;
+}
+#about p{
+    text-align: justify;
+    color: #a0a0a0;
+    margin-bottom: 40px;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px,1fr));
+    gap: 40px;
+}
+.item{
+    border: 2px solid #3a3a3a;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #1e1e1e;
+    text-align: center;
+    margin-top: 20px;
+    transition:  transform 0.3s ease, box-shadow 0.3s ease;
+}
+.item:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+}
+.item img{
+    height: 48px;
+    width: 48px;
+    filter: invert(0.75) sepia(0.5) saturate(1000%) hue-rotate(350deg) brightness(110%) contrast(101%);
+}
+.item h3{
+    font-size: 1rem;
+    font-weight: 500;
 }
